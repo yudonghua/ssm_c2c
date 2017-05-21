@@ -43,7 +43,7 @@
                 <td colspan="8" class="line"></td>
             </tr>
             <tr class="customer">
-                <td colspan="8"> 卖家：<a href="http://www.17sucai.com/preview/664159/2016-11-15/practice/demo.html#">${item.business}</a></td>
+                <td colspan="8"> 卖家：<a href="">${item.business}</a></td>
             </tr>
             <tr>
                 <td colspan="8" class="line"></td>
