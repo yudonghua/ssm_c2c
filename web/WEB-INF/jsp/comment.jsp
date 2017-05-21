@@ -75,7 +75,7 @@
         </tr>
         <tr class="shopping goods">
 
-            <td><img src="./${item.id}.png" class="img" alt="shopping"></td>
+            <td><img src="images/goods/${item.id}.png" class="img" alt="shopping"></td>
             <td colspan="3">${item.name}<br>
                 ${item.type}<br>
                 ${item.introduce}</td>
