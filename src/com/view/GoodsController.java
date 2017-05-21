@@ -31,8 +31,11 @@ public class GoodsController {
     public GoodsService getGoodsService(){return this.goodsService;}
     public void setGoodsService(GoodsService goodsService){this.goodsService=goodsService;}
     @RequestMapping("listGoods")
-    public String listGoods(HttpServletRequest req){
-        req.setAttribute("goods",goodsService.getAllGoods());
+    public String listGoods(HttpServletRequest req,@RequestParam(value = "customer", required = false)String customer,@RequestParam(value = "name", required = false)String name){
+        Goods goods = new Goods();
+        goods.setCustomer(customer);
+        goods.setName(name);
+        req.setAttribute("goods",goodsService.getAllGoods(goods));
         return "listGoods";
     }
     @RequestMapping("myGoods")
@@ -90,7 +93,7 @@ public class GoodsController {
         String path=req.getSession().getServletContext().getRealPath("images/goods");
         if(file==null)System.out.println("------文件为空");
         upFile(file,path,fileName);
-        req.setAttribute("goods",goodsService.getAllGoods());
+        req.setAttribute("goods",goodsService.getAllGoods(null));
         System.out.println(goods.getId()+"---"+price);
         return "listGoods";
     }

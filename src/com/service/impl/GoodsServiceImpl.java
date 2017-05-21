@@ -13,7 +13,7 @@ public class GoodsServiceImpl implements GoodsService{
     private GoodsDao goodsDao;
     public void insertGoods(Goods goods) {goodsDao.insertGoods(goods);}
     public void updateGoods(Goods goods) {goodsDao.updateGoods(goods);}
-    public List<Goods> getAllGoods() {return this.goodsDao.getAllGoods();}
+    public List<Goods> getAllGoods(Goods goods) {return this.goodsDao.getAllGoods(goods);}
     public List<Goods> getMyGoods(String customer) {return this.goodsDao.getMyGoods(customer);}
     public void deleteGoods(String id){this.goodsDao.deleteGoods(id);}
     public Goods getGoods(String id){return this.goodsDao.getGoods(id);}

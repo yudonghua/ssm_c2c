@@ -9,8 +9,14 @@
         </selectKey>
         insert into c2c.Goods(id,customer,name,type,introduce,comment,price) values(#{id},#{customer},#{name},#{type},#{introduce},#{comment},#{price});
     </insert>
-    <select id="getAllGoods" resultType="Goods">
+    <select id="getAllGoods" resultType="Goods" parameterType="Goods">
         SELECT * FROM c2c.goods
+        <trim suffixOverrides="and">
+            <where>
+                <if test="customer!=null"> customer like #{customer} and </if>
+                <if test="name!=null"> name like CONCAT('%','${name}','%') </if>
+            </where>
+        </trim>
     </select>
     <select id="getMyGoods" resultType="Goods" parameterType="String">
         SELECT * FROM c2c.goods where customer=#{customer}

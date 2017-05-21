@@ -51,7 +51,12 @@
             <td colspan="8" class="line"></td>
         </tr>
         <tr style="text-align: center">
-            <td  colspan="4"></td>
+            <td  colspan="4">
+                <form action="listGoods.do" style="margin: 0px auto">
+                    <input type="text" name="name"/>
+                    <input type="submit" class="btn btn-info" value="搜索"/>
+                </form>
+            </td>
             <td>单价（元）</td>
             <td>数量</td>
             <td>小计（元）</td>
@@ -63,7 +68,7 @@
             <td colspan="8" class="line"></td>
         </tr>
         <tr class="customer">
-            <td colspan="8"> 卖家：<a href="">${item.customer}</a></td>
+            <td colspan="8"> 卖家：<a href="listGoods.do?customer=${item.customer}">${item.customer}</a></td>
         </tr>
         <tr>
             <td colspan="8" class="line"></td>

@@ -58,7 +58,7 @@ public class CustomerController {
         }
         if(customer.getPassword().equals(password)){
             req.getSession().setAttribute("username",username);
-            req.setAttribute("goods",goodsService.getAllGoods());
+            req.setAttribute("goods",goodsService.getAllGoods(null));
             return "listGoods";
         }
 
@@ -76,7 +76,7 @@ public class CustomerController {
 
             if(password.equals(rpsw)){
                 req.getSession().setAttribute("username",username);
-                req.setAttribute("goods",goodsService.getAllGoods());
+                req.setAttribute("goods",goodsService.getAllGoods(null));
                 customerService.insertCustomer(new Customer(username,password,address,phone));
                 return "listGoods";
             }

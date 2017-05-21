@@ -12,6 +12,6 @@ public interface GoodsService {
     public void deleteGoods(String id);
     public Goods getGoods(String id);
     public void updateGoods(Goods goods);
-    public List<Goods> getAllGoods();
+    public List<Goods> getAllGoods(Goods goods);
     public List<Goods> getMyGoods(String Customer);
 }

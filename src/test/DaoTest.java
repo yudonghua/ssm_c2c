@@ -39,7 +39,9 @@ public class DaoTest {
 //		 customerDao.insertCustomer(customer);
 //		Order order = new Order("id","gid","","customer","address","status","name",20,200);
 //		orderDao.insertOrder(order);
-		System.out.println(orderDao.getOrder("c19a5dca3e1311e7b397509a4c0ac278"));
+		Goods goods = new Goods();
+		goods.setName("aaa");
+		System.out.println(goodsDao.getAllGoods(goods));
 //		System.out.println(orderDao.getBOrder("aaa"));
 	}
 	 
