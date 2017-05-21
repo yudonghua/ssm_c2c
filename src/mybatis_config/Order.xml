@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="goods">
+    <insert id="insertOrder">
+        <selectKey keyProperty="id" resultType="String" order="BEFORE">
+            select replace(uuid(),'-','') from dual
+        </selectKey>
+        insert into c2c.Orders(id,gid,customer,address,status,num) values(#{id},#{gid},#{customer},#{address},#{status},#{num});
+    </insert>
+    <select id="getCOrder" resultType="Order" parameterType="String">
+        SELECT orders.id,gid,goods.customer as business,orders.customer,address,status,name,price,num FROM c2c.orders inner join goods where c2c.orders.gid=goods.id and orders.customer=#{customer}
+    </select>
+    <select id="getBOrder" resultType="Order" parameterType="String">
+        SELECT orders.id,gid,goods.customer as business,orders.customer,address,status,name,price,num FROM c2c.orders inner join goods where c2c.orders.gid=goods.id and goods.customer=#{customer}
+    </select>
+    <select id="getOrder" resultType="Order" parameterType="String">
+        SELECT orders.id,gid,goods.customer as business,orders.customer,address,status,name,price,num FROM c2c.orders inner join goods where c2c.orders.gid=goods.id and orders.id=#{id}
+    </select>
+    <update id="updateOrder" parameterType="Order">
+        update c2c.orders set status=#{status}
+        where id=#{id}
+    </update>
+</mapper>
