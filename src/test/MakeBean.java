@@ -53,7 +53,8 @@ public class MakeBean {
             System.out.println("public List<"+up+"> getAll"+up+"() {return this."+bean+"Dao.getAll"+up+"();}");
             System.out.println("public void delete"+up+"(Long id){this."+bean+"Dao.delete"+up+"(id);}");
             System.out.println("public void set"+up+"Dao("+up+"Dao "+up+"Dao) {this."+bean+"Dao = "+up+"Dao;}");
-        }}
+        }
+    }
 
     public static void getBean(String beans[]) {
         for(String bean:beans){

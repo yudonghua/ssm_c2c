@@ -21,7 +21,7 @@
     <link rel="stylesheet" type="text/css" href="css/form.css">
     <script src="js/uploadPreview.js" type="text/javascript"></script>
     <script src="js/uploadPreview.min.js" type="text/javascript"></script>
-    <script src="jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
     <script>
         window.onload = function () {
             new uploadPreview({ UpBtn: "up_img", DivShow: "imgdiv", ImgShow: "imgShow" });

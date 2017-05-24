@@ -41,7 +41,7 @@ public class DaoTest {
 //		orderDao.insertOrder(order);
 		Goods goods = new Goods();
 		goods.setName("aaa");
-		System.out.println(goodsDao.getAllGoods(goods));
+		System.out.println(goodsDao.getAllGoods(null));
 //		System.out.println(orderDao.getBOrder("aaa"));
 	}
 	 

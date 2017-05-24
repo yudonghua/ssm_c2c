@@ -5,9 +5,9 @@
 <head>
     <title></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link type="text/css" rel="stylesheet" href="test.css"/>
+    <link type="text/css" rel="stylesheet" href="css/test.css"/>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="jquery-1.7.1.min.js" language="JavaScript"></script>
+    <script src="js/jquery.min.js" language="JavaScript"></script>
 
 </head>
 <body>

@@ -51,6 +51,22 @@ public class GoodsController {
         req.setAttribute("goods",goodsService.getMyGoods(username));
         return "myGoods";
     }
+    @RequestMapping("delete")
+    public String delete(HttpServletRequest req,@RequestParam String id,@RequestParam String password){
+        System.out.println(password);
+        if(password.equals("admin")){
+            System.out.println("delete-----");
+            goodsService.deleteGoods(id);
+        }
+
+        req.setAttribute("goods",goodsService.getAllGoods(null));
+        return "admin";
+    }
+    @RequestMapping("admin")
+    public String admin(HttpServletRequest req){
+        req.setAttribute("goods",goodsService.getAllGoods(null));
+        return "admin";
+    }
     @RequestMapping("updateGoods")
     public String updateGoods(HttpServletRequest req){
         return "updateGoods";

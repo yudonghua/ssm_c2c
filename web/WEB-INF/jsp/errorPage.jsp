@@ -22,6 +22,6 @@
 		</script>
 	</head>
 	<body onload="changeTime();">
-		<h2>异常操作，页面将在<span id="time">3</span>秒后返回商城！</h2>
+		<h2>异常操作，请检查您是否登录，页面将在<span id="time">3</span>秒后返回商城！</h2>
 	</body>
 </html>

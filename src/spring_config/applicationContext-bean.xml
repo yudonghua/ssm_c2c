@@ -6,6 +6,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
    <!-- =================================== Service层 ===================================== -->
+
    <bean name="customerService" class="com.service.impl.CustomerServiceImpl" scope="prototype">
    		<property name="customerDao" ref="customerDao" />
    </bean>

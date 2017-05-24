@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=utf-8"
-pageEncoding="utf-8"%>
+         pageEncoding="utf-8"%>
 <html>
 <head>
     <title></title>
@@ -34,7 +34,7 @@ pageEncoding="utf-8"%>
             });
             $(".delete").click(function(){
                 var password=$(this).parent().parent().find('.form-control').val()
-                location.href = "admin.do?gid="+gid+"&password="+password;
+                location.href = "delete.do?id="+gid+"&password="+password;
 
             });
         });
@@ -49,7 +49,8 @@ pageEncoding="utf-8"%>
 <div id="content">
     <div>
         <ul class="nav navbar-nav">
-            <li class="active">管理员页面</li>
+            <li class="active"><a href="listGoods.do">商城</a></li>
+            <li><a href="">管理员页面</a></li>
         </ul>
     </div>
     <table width="100%" border="0" cellspacing="0" cellpadding="0" >
@@ -84,8 +85,8 @@ pageEncoding="utf-8"%>
             <tr class="shopping goods">
                 <td><img src="images/goods/${item.id}.png" class="img" alt="shopping"></td>
                 <td colspan="3">${item.name}<br>
-                    ${item.type}<br>
-                    ${item.introduce}</td>
+                        ${item.type}<br>
+                        ${item.introduce}</td>
                 <td class="price">${item.price}</td>
                 <td class="cnum">
                     <input type="text" class="num" name="num" value="0">
@@ -103,9 +104,6 @@ pageEncoding="utf-8"%>
 
         </tbody>
     </table>
-    <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-        开始演示模态框
-    </a>
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
