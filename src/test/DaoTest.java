@@ -34,7 +34,7 @@ public class DaoTest {
 	//INSERT INTO USER_INFO VALUES(1,'admin','123','1986-11-24',1,20);
 	@Test
 	public void testGetOneCustomer(){
-//		new ApplicationDataBaseInit().contextInitialized(null);
+		new ApplicationDataBaseInit().contextInitialized(null);
 //		 Customer customer = new Customer("a","test","123","das");
 //		 customerDao.insertCustomer(customer);
 //		Order order = new Order("id","gid","","customer","address","status","name",20,200);

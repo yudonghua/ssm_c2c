@@ -15,7 +15,8 @@ public class DBEnvironmentListener {
 	//判断数据库环境是否已经搭建
 	public boolean isDataBaseInit(Connection con) throws Exception{
 		String[] tableType = {"TABLE"};
-		ResultSet rs = con.getMetaData().getTables("foo", null, null, tableType);
+		ResultSet rs = con.getMetaData().getTables("c2c" +
+				"", null, null, tableType);
 		boolean isNull = true;
 		while(rs.next()){
 			isNull = false;
