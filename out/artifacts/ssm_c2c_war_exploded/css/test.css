@@ -1,0 +1,50 @@
+body{
+    font-family:"宋体";
+}
+#header ul{
+    background:#8B4512;border-radius:0 30px;text-align:center;
+}
+.cnum{
+
+}
+.cnum input{  width:1.5rem; height:1.5rem; font-size:1rem; border:1px solid #e5e5e5; text-align:center; color:#A1A09C; background-color:#fff;}
+.cnum input.num{ border:none; color:#FF5151;}
+.line{
+    height:0.6rem;
+    background:#f4f2f2;
+}
+.comment{text-align: center;width: 80%;margin:0 auto;}
+
+.dateview {position:absolute;left:535px;top:15px;width:64px;line-height:35px;background:#8B4512;border-radius:0 30px;text-align:center;
+    color:#fff;font-weight:bold;font-size:14px; }
+.say_box {background:#f8f8f8;width:490px; border-radius:5px;position:relative; padding: 20px 0;font-size:14px;font-family:"宋体"; }
+.say_box::before {content: "";width:0px;height:0px;border-style:solid;border-width:0px 0 20px 22px;border-color:transparent transparent transparent #fff;position:absolute;left:490px;top: 23px; }/* 三角形 */
+.say_box::after {content: "";width: 10px;height: 10px;border-radius: 50%;position:absolute;left:513px;top:16px;background:#CCCCCE;border: 2px solid #fff;transition:all 0.5s; }/* 圆形 */
+.say_box:hover::before {border-color:transparent transparent transparent #CECCCD }/* 三角形 */
+.say_box:hover::after {border:#fff 2px solid;background:#999; }/* 圆形 */
+.say_box:hover {background: #f4f2f2;color:#333; text-shadow: #f7f7f7 1px 1px 1px }
+.shopping{
+    margin: 3px auto;
+    background: #f8f8f8;
+}
+.img{
+    margin: 3px 3px auto;
+    height: 4rem;
+    width: 4rem;
+}
+#header{
+    border:wheat solid thin;
+    outline:#f4f2f2 dotted thick;
+}
+.customer{
+    text-align: center;
+}
+.goods{
+    border:wheat solid thin;
+    outline:#f4f2f2 dotted thick;
+    text-align: center;
+}
+.goods td{
+    border:whitesmoke solid thin;
+
+}
