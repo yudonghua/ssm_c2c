@@ -65,7 +65,7 @@
                         <button type="submit" class="btn btn-default">添加</button>
                     </div>
                     <div class="form-group" >
-                        <div>${msg}</div>
+                        <font color="red" size="2" style="line-height:40px">${msg}</font>
                     </div>
 
                 </form>

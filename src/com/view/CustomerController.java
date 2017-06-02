@@ -57,6 +57,9 @@ public class CustomerController {
             return "Login";
         }
         if(customer.getPassword().equals(password)){
+
+
+
             req.getSession().setAttribute("username",username);
             req.setAttribute("goods",goodsService.getAllGoods(null));
             return "listGoods";

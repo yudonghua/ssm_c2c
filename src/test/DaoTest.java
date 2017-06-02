@@ -13,6 +13,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.Map;
+
 
 public class DaoTest {
 	private ClassPathXmlApplicationContext context;
@@ -34,14 +36,15 @@ public class DaoTest {
 	//INSERT INTO USER_INFO VALUES(1,'admin','123','1986-11-24',1,20);
 	@Test
 	public void testGetOneCustomer(){
-		new ApplicationDataBaseInit().contextInitialized(null);
+//		new ApplicationDataBaseInit().contextInitialized(null);
 //		 Customer customer = new Customer("a","test","123","das");
-//		 customerDao.insertCustomer(customer);
+		 System.out.println(customerDao.getCustomer("aaa"));
+//		System.out.println(customerDao.getMap());
 //		Order order = new Order("id","gid","","customer","address","status","name",20,200);
 //		orderDao.insertOrder(order);
-		Goods goods = new Goods();
-		goods.setName("aaa");
-		System.out.println(goodsDao.getAllGoods(null));
+//		Goods goods = new Goods();
+//		goods.setName("aaa");
+//		System.out.println(goodsDao.getAllGoods(null));
 //		System.out.println(orderDao.getBOrder("aaa"));
 	}
 	 

@@ -25,6 +25,7 @@ import java.util.Map;
  * Created by PC on 2017/5/19.
  */
 @Controller
+
 public class GoodsController {
     @Resource
     private GoodsService goodsService;
@@ -102,7 +103,13 @@ public class GoodsController {
         String name = req.getParameter("name");
         String type= req.getParameter("type");
         String introduce = req.getParameter("introduce");
-        int price= Integer.parseInt(req.getParameter("price"));
+//        if(req.getParameter("price").matches())
+        String prepare = req.getParameter("price");
+        if(!prepare.matches("[1-9][0-9]{1,10}")){
+            req.setAttribute("msg","请输入一个1-9999999999之间的整数");
+            return "updateGoods";
+        }
+        int price= Integer.parseInt(prepare);
         Goods goods = new Goods("",(String)req.getSession().getAttribute("username"),name,type,introduce,"[]",price);
         goodsService.insertGoods(goods);
         String fileName = goods.getId()+".png";

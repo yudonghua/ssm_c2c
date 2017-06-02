@@ -7,6 +7,7 @@ import com.entity.Customer;
 import org.mybatis.spring.annotation.Mapper;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper("customerDao")
 public interface CustomerDao {

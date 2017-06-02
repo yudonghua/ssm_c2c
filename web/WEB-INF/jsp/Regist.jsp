@@ -53,7 +53,7 @@
                         <button type="submit" class="btn btn-default">注册</button>
                     </div>
                     <div class="form-group" >
-                        <div>${msg}</div>
+                        <font color="red" size="2" style="line-height:40px">${msg}</font>
                     </div>
 
                 </form>

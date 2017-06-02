@@ -45,15 +45,15 @@
 		设置全局异常处理方式。！注意，如果使用XML配置了异常处理方式，
 		那么使用Annotation处理异常的方式将不再被使用。
 	-->
-	<bean name="exceptionResolver"
-	      class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
-		<property name="exceptionMappings">
-			<props>
-				<!-- 这里的errorPage同样应用viewResolver的前缀、后缀匹配 -->
-				<prop key="java.lang.Exception">errorPage</prop>
-			</props>
-		</property>
-	</bean>
+	<!--<bean name="exceptionResolver"-->
+	      <!--class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">-->
+		<!--<property name="exceptionMappings">-->
+			<!--<props>-->
+				<!--&lt;!&ndash; 这里的errorPage同样应用viewResolver的前缀、后缀匹配 &ndash;&gt;-->
+				<!--<prop key="java.lang.Exception">errorPage</prop>-->
+			<!--</props>-->
+		<!--</property>-->
+	<!--</bean>-->
 
 	<bean name="customerController" class="com.view.CustomerController" scope="prototype">
 		<property name="customerService" ref="customerService"/>

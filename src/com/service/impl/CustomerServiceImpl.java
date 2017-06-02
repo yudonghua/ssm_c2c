@@ -5,6 +5,7 @@ import com.entity.Customer;
 import com.service.CustomerService;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Dell on 2017/5/19.
@@ -15,6 +16,8 @@ public class CustomerServiceImpl implements CustomerService{
 
 
     public List<Customer> getAllCustomer() {return this.customerDao.getAllCustomer();}
+
+
     public void deleteCustomer(String username){this.customerDao.deleteCustomer(username);}
     public Customer getCustomer(String username){return this.customerDao.getCustomer(username);}
     public void setCustomerDao(CustomerDao CustomerDao) {this.customerDao = CustomerDao;}
