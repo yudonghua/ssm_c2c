@@ -7,6 +7,7 @@ import com.dao.OrderDao;
 import com.entity.Customer;
 import com.entity.Goods;
 import com.entity.Order;
+import com.service.CustomerService;
 import com.util.ApplicationDataBaseInit;
 import com.util.DBEnvironmentListener;
 import org.junit.Before;
@@ -20,14 +21,14 @@ public class DaoTest {
 	private ClassPathXmlApplicationContext context;
 	private CustomerDao customerDao;
 	private GoodsDao goodsDao;
-	private OrderDao orderDao;
+	private CustomerService customerService;
 	
 	 @Before
 	public void init(){
 		context = new ClassPathXmlApplicationContext("spring_config/applicationContext.xml");
 		 customerDao = (CustomerDao)context.getBean("customerDao");
 		 goodsDao = (GoodsDao)context.getBean("goodsDao");
-		 orderDao = (OrderDao)context.getBean("orderDao");
+		 customerService = (CustomerService)context.getBean("customerService");
 		 if(goodsDao==null) System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaa");
 		 if(customerDao==null) System.out.println("bbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
 	}
@@ -37,8 +38,9 @@ public class DaoTest {
 	@Test
 	public void testGetOneCustomer(){
 //		new ApplicationDataBaseInit().contextInitialized(null);
-//		 Customer customer = new Customer("a","test","123","das");
-		 System.out.println(customerDao.getCustomer("aaa"));
+		 Customer customer = new Customer("aaa","aaa","123","das");
+		customerService.updateCustomer(customer);
+		 System.out.println(customerService.getAllCustomer());
 //		System.out.println(customerDao.getMap());
 //		Order order = new Order("id","gid","","customer","address","status","name",20,200);
 //		orderDao.insertOrder(order);

@@ -20,4 +20,8 @@
     <delete id="deleteCustomer" parameterType="String">
         delete from c2c.customer where username = #{username}
     </delete>
+        <update id="updateCustomer" parameterType="Customer">
+        update c2c.customer set phone = #{phone},address = #{address}
+        where username=#{username}
+    </update>
 </mapper>

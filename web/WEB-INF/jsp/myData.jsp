@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-pageEncoding="utf-8"%>
+         pageEncoding="utf-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
@@ -27,7 +27,7 @@ pageEncoding="utf-8"%>
     <div class="container">
         <div class="row">
             <div class="col-md-offset-3 col-md-6">
-                <form action="registServlet.do" method="post" class="form-horizontal form-style">
+                <form action="data.do" method="post" class="form-horizontal form-style">
                     <span class="heading">${username}</span>
                     <div class="form-group">
                         <input type="text" class="form-control" name="phone"  value="${phone}" style="float:left" placeholder="电话号码">

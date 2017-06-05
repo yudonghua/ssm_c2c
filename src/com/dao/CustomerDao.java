@@ -15,4 +15,5 @@ public interface CustomerDao {
     public void deleteCustomer(String string);
     public Customer getCustomer(String string);
     public List<Customer> getAllCustomer();
+    public void updateCustomer(Customer customer);
 }

@@ -23,6 +23,7 @@ import java.util.List;
  */
 @Controller
 public class CustomerController {
+
     @Resource
     private CustomerService customerService;
     @Resource
@@ -46,10 +47,33 @@ public class CustomerController {
     public String Login(){
         return "Login";
     }
+    @RequestMapping(value="myData", method= RequestMethod.GET)
+    public String myData(HttpServletRequest request){
+        String username = (String)request.getSession().getAttribute("username");
+        Customer customer = customerService.getCustomer(username);
+        request.getSession().setAttribute("phone",customer.getPhone());
+        request.getSession().setAttribute("address",customer.getAddress());
+        return "myData";
+    }
+    @RequestMapping(value="data", method= RequestMethod.POST)
+    public String data(HttpServletRequest request,String address,String phone){
+        String username = (String)request.getSession().getAttribute("username");
+        Customer customer = customerService.getCustomer(username);
+        customer.setAddress(address);
+        customer.setPhone(phone);
+        customerService.updateCustomer(customer);
+        return "listGoods";
+    }
+    /**
+     * 商户登陆功能
+     * @param username：商户登陆名
+     * @param password：商户登陆密码
+     * @return：登陆是否成功
+     */
     @RequestMapping(value="loginServlet", method= RequestMethod.POST)
     public String loginServlet(HttpServletRequest req,@RequestParam String username,@RequestParam String password,@RequestParam String verifycode){
-//        System.out.println(verifycode+sessionverify);
         String sessionverify=(String)req.getSession().getAttribute("sessionverify");
+                System.out.println(verifycode+sessionverify);
         Customer customer = customerService.getCustomer(username);
         System.out.println(customer+"----"+username+"-----"+verifycode+"---"+sessionverify);
         if(!sessionverify.equalsIgnoreCase(verifycode)){

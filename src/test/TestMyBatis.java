@@ -7,7 +7,11 @@ import org.apache.ibatis.session.SqlSessionFactory;
 public class TestMyBatis {
 	static SqlSessionFactory sqlSessionFactory = null;
 	static {
+		System.out.println("static");
 		sqlSessionFactory = MyBatisUtil.getSqlSessionFactory();
+	}
+	{
+		System.out.println("normal");
 	}
 
 	public static void main(String[] args) {

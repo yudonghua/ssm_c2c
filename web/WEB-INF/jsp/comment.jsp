@@ -43,6 +43,7 @@
             <li><a href="myGoods.do">我的仓库</a></li>
             <li><a href="myOrder.do">我的订单</a></li>
             <li><a href="itOrder.do">他人订单</a></li>
+            <li><a href="myData.do">信息修改</a></li>
         </ul>
     </div>
     <table width="100%" border="0" cellspacing="0" cellpadding="0" >

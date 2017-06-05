@@ -105,8 +105,8 @@ public class GoodsController {
         String introduce = req.getParameter("introduce");
 //        if(req.getParameter("price").matches())
         String prepare = req.getParameter("price");
-        if(!prepare.matches("[1-9][0-9]{1,10}")){
-            req.setAttribute("msg","请输入一个1-9999999999之间的整数");
+        if(!prepare.matches("[1-9][0-9]{0,8}")){
+            req.setAttribute("msg","价钱请输入一个1-999999999之间的整数");
             return "updateGoods";
         }
         int price= Integer.parseInt(prepare);

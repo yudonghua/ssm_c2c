@@ -17,6 +17,11 @@ public class CustomerServiceImpl implements CustomerService{
 
     public List<Customer> getAllCustomer() {return this.customerDao.getAllCustomer();}
 
+    @Override
+    public void updateCustomer(Customer customer) {
+        customerDao.updateCustomer(customer);
+    }
+
 
     public void deleteCustomer(String username){this.customerDao.deleteCustomer(username);}
     public Customer getCustomer(String username){return this.customerDao.getCustomer(username);}
